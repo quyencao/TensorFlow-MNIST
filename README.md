@@ -77,3 +77,5 @@ Predict random item: 5 is 5, accuracy: 1.000
 ```
 ➜  TensorFlow-MNIST# tensorboard --logdir=logs/mnist-cnn
 ```
+
+https://stackoverflow.com/questions/13576161/convert-opencv-image-into-pil-image-in-python-for-use-with-zbar-library
