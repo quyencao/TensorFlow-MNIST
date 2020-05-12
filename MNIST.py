@@ -1,6 +1,7 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior() 
 
-from tensorflow.examples.tutorials.mnist import input_data
+# from tensorflow.examples.tutorials.mnist import input_data
 from TFUtils import TFUtils
 
 
@@ -31,13 +32,13 @@ class MNIST:
         self.sess.run(init)
 
     def print_status(self, text):
-        print '---'
-        print text
+        print('---')
+        print(text)
 
-    def load_training_data(self, data_path):
-        print 'Preparing MNIST data..'
+    # def load_training_data(self, data_path):
+    #     print('Preparing MNIST data..')
 
-        self.mnist = input_data.read_data_sets(data_path, one_hot=True)
+    #     self.mnist = input_data.read_data_sets(data_path, one_hot=True)
 
     def build_feed_dict(self, X, Y, p_keep_conv=1., p_keep_hidden=1.):
         return {
